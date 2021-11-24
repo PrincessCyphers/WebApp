@@ -3,23 +3,23 @@ package com.PrincessCyphers.user;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "users")
+@Table (name= "users")
 
 public class User {
     @Id             // shows that this is primary col in table
     @GeneratedValue(strategy = GenerationType.IDENTITY)             // allows db to auto gen id col
-    private int id;
+    private Integer id;
 
-    @Column(nullable = false, unique=true, length = 50)               // value required and must be unique
+    @Column(nullable = false, unique=true, length = 45)               // value required and must be unique
     private String email;
 
-    @Column(length = 20, nullable = false)
+    @Column(nullable = false, length = 20)
     private String password;
 
-    @Column(length = 50, nullable = false, name = "first_Name")
+    @Column(nullable = false, length = 45, name = "first_Name")
     private String firstName;
 
-    @Column(length = 50, nullable = false, name = "last_Name")
+    @Column(nullable = false, length = 45, name = "last_Name")
     private String lastName;
 
     public int getId() {
