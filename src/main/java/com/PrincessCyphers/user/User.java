@@ -1,4 +1,4 @@
-package com.learning.user;
+package com.PrincessCyphers.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

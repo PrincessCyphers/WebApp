@@ -1,7 +1,7 @@
-package com.learning.web;
+package com.PrincessCyphers.web;
 
-import com.learning.user.User;
-import com.learning.repository.UserRepository;
+import com.PrincessCyphers.user.User;
+import com.PrincessCyphers.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;

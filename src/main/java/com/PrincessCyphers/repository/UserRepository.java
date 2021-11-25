@@ -1,6 +1,6 @@
-package com.learning.repository;
+package com.PrincessCyphers.repository;
 
-import com.learning.user.User;
+import com.PrincessCyphers.user.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

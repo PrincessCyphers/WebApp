@@ -1,6 +1,6 @@
-package com.learning.repository;
+package com.PrincessCyphers.repository;
 
-import com.learning.user.User;
+import com.PrincessCyphers.user.User;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +9,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
 @DataJpaTest
-//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)            //test will be against real db
-//@Rollback(false)                 // Keeps data committed to db
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)            //test will be against real db
+@Rollback(false)                 // Keeps data committed to db
 public class UserRepositoryTests {
 
     @Autowired
