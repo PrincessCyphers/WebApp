@@ -2,12 +2,12 @@ package com.PrincessCyphers.user;
 
 import javax.persistence.*;
 
-@Entity
+@Entity                     // tells hibernate to make table out of this class
 @Table (name= "users")
 
 public class User {
     @Id             // shows that this is primary col in table
-    @GeneratedValue(strategy = GenerationType.IDENTITY)             // allows db to auto gen id col
+    @GeneratedValue(strategy = GenerationType.AUTO)             // allows db to auto gen id col
     private Integer id;
 
     @Column(nullable = false, unique=true, length = 45)               // value required and must be unique
@@ -22,7 +22,7 @@ public class User {
     @Column(nullable = false, length = 45, name = "last_Name")
     private String lastName;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
