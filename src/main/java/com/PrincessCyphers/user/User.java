@@ -7,16 +7,16 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@Entity
+@Entity                     // tells hibernate to make table out of this class
 @NoArgsConstructor
 @AllArgsConstructor
 @Table (name= "users")
 public class User {
     @Id             // shows that this is primary col in table
-    @GeneratedValue(strategy = GenerationType.IDENTITY)             // allows db to auto gen id col
+    @GeneratedValue(strategy = GenerationType.AUTO)             // allows db to auto gen id col
     private Integer id;
 
-    @Column(nullable = false, unique=true, length = 45)               // value required and must be unique
+    @Column(nullable = false, unique = true, length = 45)               // value required and must be unique
     private String email;
 
     @Column(nullable = false, length = 20)
@@ -27,4 +27,5 @@ public class User {
 
     @Column(nullable = false, length = 45, name = "last_Name")
     private String lastName;
+
 }
