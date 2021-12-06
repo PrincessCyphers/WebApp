@@ -1,0 +1,7 @@
+package com.PrincessCyphers.Service;
+
+public class UserNotFoundException extends Throwable {
+    public UserNotFoundException(String message) {
+        super(message);
+    }
+}
