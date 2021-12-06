@@ -28,4 +28,13 @@ public class UserService {
         throw new UserNotFoundException("No user found with ID " + id);
     }
 
+    public void delete(Integer id) throws UserNotFoundException {
+        // check exists using count by ID first before delete by id
+        Long count = repository.countById(id);
+        if (count == null || count == 0) {
+            throw new UserNotFoundException("Count not find any users with ID: " + id);
+        }
+        repository.deleteById(id);
+    }
+
 }
