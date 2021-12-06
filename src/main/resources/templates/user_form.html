@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Add new user</title>
+    <title>[[${pageTitle}]]</title>
 </head>
 <body>
 <div class="container-fluid">
-    <h2 class="text-centre"> Add New User(s) </h2>
+    <h2 class="text-centre">[[${pageTitle}]]</h2>
 
     <form th:action="@{/users/save" method ="post" th:object="S{user}"
           style="max-width: 600px; margin: 0 auto">
